@@ -1,13 +1,11 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:18:19: not found: value Ctrl[0m
-[0m[[0m[31merror[0m] [0m[0mio.ReadIO.OE_N := Ctrl[0m
-[0m[[0m[31merror[0m] [0m[0m                  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:21:30: value Data is not a member of chisel3.Bundle{val Ctrl: chisel3.Bool; val ReadHS: chisel3.util.DecoupledIO[chisel3.UInt]; val ReadIO: USBIO_RD}[0m
-[0m[[0m[31merror[0m] [0m[0mio.ReadHS.bits := RegNext(io.Data)[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:22:6: not found: value Ctrl[0m
-[0m[[0m[31merror[0m] [0m[0mwhen(Ctrl === false.B  &&  RXF_N === false.B && io.ReadHS.ready === true.B){[0m
-[0m[[0m[31merror[0m] [0m[0m     ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:22:28: not found: value RXF_N[0m
-[0m[[0m[31merror[0m] [0m[0mwhen(Ctrl === false.B  &&  RXF_N === false.B && io.ReadHS.ready === true.B){[0m
-[0m[[0m[31merror[0m] [0m[0m                           ^[0m
-[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/USBTOP.scala:18:5: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Read[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Data[0m
+[0m[[0m[31merror[0m] [0m[0mio<>Read_instance[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/USBTOP.scala:19:5: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Write[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Data[0m
+[0m[[0m[31merror[0m] [0m[0mio<>Write_instance[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

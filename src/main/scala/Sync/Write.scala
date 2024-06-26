@@ -9,7 +9,7 @@ val Data    = Output(UInt(8.W))
 class Write extends Module{
 val io=IO(new Bundle{
 val WriteHS =Flipped(new DecoupledIO(UInt(8.W))) 
-val WriteIO =new(USBIO_WR)
+val WriteIO =new USBIO_WR
 })
 io.WriteIO.WR_N     :=   ~(io.WriteHS.valid && ~io.WriteIO.TXE_N)
 io.WriteIO.Data     :=   io.WriteHS.bits

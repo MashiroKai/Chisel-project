@@ -1,0 +1,32 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"generated"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~USBTOP|USBTOP>io_ReadIO_OE_N",
+    "sources":[
+      "~USBTOP|USBTOP>io_Ctrl"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~USBTOP|USBTOP>io_WriteIO_Data",
+    "sources":[
+      "~USBTOP|USBTOP>io_WriteHS_bits"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~USBTOP|USBTOP>io_WriteIO_WR_N",
+    "sources":[
+      "~USBTOP|USBTOP>io_WriteHS_valid",
+      "~USBTOP|USBTOP>io_WriteIO_TXE_N"
+    ]
+  }
+]
