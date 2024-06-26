@@ -1,4 +1,13 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:8:15: not found: value input[0m
-[0m[[0m[31merror[0m] [0m[0mval Data    = input(UInt(8.W))[0m
-[0m[[0m[31merror[0m] [0m[0m              ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:18:19: not found: value Ctrl[0m
+[0m[[0m[31merror[0m] [0m[0mio.ReadIO.OE_N := Ctrl[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:21:30: value Data is not a member of chisel3.Bundle{val Ctrl: chisel3.Bool; val ReadHS: chisel3.util.DecoupledIO[chisel3.UInt]; val ReadIO: USBIO_RD}[0m
+[0m[[0m[31merror[0m] [0m[0mio.ReadHS.bits := RegNext(io.Data)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:22:6: not found: value Ctrl[0m
+[0m[[0m[31merror[0m] [0m[0mwhen(Ctrl === false.B  &&  RXF_N === false.B && io.ReadHS.ready === true.B){[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Read.scala:22:28: not found: value RXF_N[0m
+[0m[[0m[31merror[0m] [0m[0mwhen(Ctrl === false.B  &&  RXF_N === false.B && io.ReadHS.ready === true.B){[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

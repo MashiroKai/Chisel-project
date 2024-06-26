@@ -9,45 +9,23 @@ val Data    = Input(UInt(8.W))
 }
 class Read extends Module { 
 val io = IO(new Bundle {
+val Ctrl   = Input(Bool())  //High Write Low Read
 val ReadHS = new DecoupledIO(UInt(8.W)) 
 val ReadIO = new USBIO_RD
 })
-val RXF =   Wire(Bool())
-val OE  =   RegInit(false.B)
-val RD  =   RegInit(false.B)
-    RXF := ~io.ReadIO.RXF_N
-    io.ReadIO.OE_N  := ~OE
-    io.ReadIO.RD_N  := ~RD 
-    io.ReadHS.bits     :=  io.ReadIO.Data
-    io.ReadHS.valid    :=  RD
-when(RXF === true.B &&io.ReadHS.ready  === true.B){
-    OE  :=  true.B
-}.otherwise{
-    OE  :=  false.B
-}
-when(OE === true.B  &&  RXF === true.B){
+
+val RD  =   WireDefault(false.B)
+io.ReadIO.OE_N := io.Ctrl
+io.ReadIO.RD_N := RegNext(!RD)
+io.ReadHS.valid := RegNext(RD)
+io.ReadHS.bits := RegNext(io.ReadIO.Data)
+when(io.Ctrl === false.B  &&  io.ReadIO.RXF_N === false.B && io.ReadHS.ready === true.B){
     RD  := true.B
 }.otherwise{
     RD  := false.B
 }
 }
 
-class ReadTestTop extends Module{
-val io=IO(new Bundle{
-val ReadHS =Flipped(new DecoupledIO(UInt(8.W)))
-val ReadIO = Flipped(new USBIO_RD)
-})
-val Read_dut = Module (new Read)
-io.ReadHS <> Read_dut.io.ReadHS
-io.ReadIO <> Read_dut.io.ReadIO
-when(io.ReadIO.RD_N === false.B){
-    io.ReadIO.Data := io.ReadIO.Data + 1.U
-}
-when(io.ReadHS.valid){
-    io.ReadHS.ready := false.B
-    io.ReadHS.ready := RegNext(RegNext(RegNext(true.B)))
-}
-}
-object ReadTestTop extends App{
- (new chisel3.stage.ChiselStage).emitVerilog(new ReadTestTop(), Array("--target-dir","generated"))
+object Read extends App{
+ (new chisel3.stage.ChiselStage).emitVerilog(new Read(), Array("--target-dir","generated"))
 }
