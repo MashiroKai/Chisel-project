@@ -1,11 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/USBTOP.scala:18:5: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Read[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.Data[0m
-[0m[[0m[31merror[0m] [0m[0mio<>Read_instance[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/USBTOP.scala:19:5: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Write[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.Data[0m
-[0m[[0m[31merror[0m] [0m[0mio<>Write_instance[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/main/scala/Sync/Fakedata.scala:23:16: Invalid literal number[0m
+[0m[[0m[31merror[0m] [0m[0mval WaitTime = 60000_000[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

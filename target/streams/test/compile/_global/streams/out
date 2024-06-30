@@ -1,7 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/test/scala/Sync/WirteTest.scala:27:16: illegal start of simple pattern[0m
-[0m[[0m[31merror[0m] [0m[0mval Signal fork{[0m
-[0m[[0m[31merror[0m] [0m[0m               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/test/scala/Sync/WirteTest.scala:35:1: '=' expected.[0m
-[0m[[0m[31merror[0m] [0m[0mdut.clock.step()[0m
-[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/test/scala/Sync/FakedataTest.scala:11:8: value Start is not a member of chisel3.Bundle{val Ctrl: chisel3.Bool; val ReadHS: chisel3.util.DecoupledIO[chisel3.UInt]; val ReadIO: USBIO_RD}[0m
+[0m[[0m[31merror[0m] [0m[0mdut.io.Start.poke(true.B)[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kaiyu/Documents/Chisel/USB2.0/src/test/scala/Sync/FakedataTest.scala:12:8: value WriteHS is not a member of chisel3.Bundle{val Ctrl: chisel3.Bool; val ReadHS: chisel3.util.DecoupledIO[chisel3.UInt]; val ReadIO: USBIO_RD}[0m
+[0m[[0m[31merror[0m] [0m[0mdut.io.WriteHS.ready.poke(true.B)[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
 [0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
